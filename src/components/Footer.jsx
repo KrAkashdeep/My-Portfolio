@@ -12,8 +12,7 @@ function Footer() {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="text-center md:text-left">
           <h2 className="text-xl font-bold mb-2">Contact Me</h2>
-          <p>Email: contact@example.com</p>
-          <p>Phone: +1 (123) 456-7890</p>
+          <p>Email: akashdeep93140@gmail.com</p>
         </div>
         <div className="text-center">
           <h2 className="text-xl font-bold mb-3">Follow Me</h2>
@@ -24,13 +23,21 @@ function Footer() {
                 className="text-2xl hover:text-gray-400"
               />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://x.com/_KrAkashdeep_"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon
                 icon={faTwitter}
                 className="text-2xl hover:text-gray-400"
               />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/kumar-akashdeep/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="text-2xl hover:text-gray-400"
@@ -48,24 +55,16 @@ function Footer() {
           <h2 className="text-xl font-bold mb-2">Quick Links</h2>
           <ul className="space-y-2">
             <li>
-              <a href="#home" className="hover:text-gray-400">
-                Home
-              </a>
+              <a className="hover:text-gray-400">Home</a>
             </li>
             <li>
-              <a href="#about" className="hover:text-gray-400">
-                About
-              </a>
+              <a className="hover:text-gray-400">About</a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-gray-400">
-                Projects
-              </a>
+              <a className="hover:text-gray-400">Projects</a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-gray-400">
-                Contact
-              </a>
+              <a className="hover:text-gray-400">Contact</a>
             </li>
           </ul>
         </div>

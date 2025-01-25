@@ -4,18 +4,24 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const projects = [
   {
     title: "Movies Sentiment Analysis",
-    description: "Movies Sentiment Analysis using Python.",
+    description:
+      "Movie sentiment analysis involves analyzing movie reviews to determine whether they express positive or negative opinions.",
     image: "../../sentiment.png",
+    link: "https://github.com/KrAkashdeep/Movie_Sentiment_Analysis",
   },
   {
     title: "video call app",
-    description: "A video call app created using React and WebRTC",
+    description:
+      "A video call app facilitates seamless real-time communication, allowing users to interact via video, text chat, and shared screens.",
     image: "../../video_call.png",
+    link: "https://github.com/KrAkashdeep/Video-Conferencing-Website",
   },
   {
     title: "Blog App",
-    description: "Blogify is a blog app created using Next.js",
+    description:
+      "A blog app allows users to create and share posts, interact through likes and comments. It serves as a platform for content creators and readers to connect and exchange ideas.",
     image: "../../blogify.png",
+    link: "https://github.com/KrAkashdeep/blog-app`",
   },
 ];
 
@@ -38,7 +44,10 @@ function Project() {
               alt={project.title}
               className="w-full h-48 object-cover"
             />
-            <div className="absolute inset-0 bg-gray-700 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div
+              onClick={() => window.open(project.link)}
+              className="absolute inset-0 bg-gray-700 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
               <div className="text-white text-center px-4">
                 <h2 className="text-xl font-bold mb-4">{project.title}</h2>
                 <p className="text-sm font-medium">{project.description}</p>

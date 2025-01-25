@@ -19,20 +19,24 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add the logic to send the form data to your backend
     console.log("Form submitted:", formData);
     setSubmitted(true);
   };
 
   return (
-    <div className="container mx-auto px-4 flex flex-col items-center min-h-screen py-2">
-      <h1 className="text-3xl font-bold mt-16 mb-8">Contact Us</h1>
+    <div
+      id="contact"
+      className="container -mt-20 mx-auto px-4 flex flex-col items-center justify-center min-h-screen py-16"
+    >
+      <h1 className="text-2xl md:text-3xl font-bold mt-8 mb-8 text-center">
+        {`Let's Work Together`}
+      </h1>
       {submitted ? (
-        <div className="text-green-500 text-center">
+        <div className="text-green-500 text-center max-w-md p-4 bg-green-50 rounded">
           Thank you for your message! We will get back to you soon.
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="w-full max-w-lg">
+        <form onSubmit={handleSubmit} className="w-full max-w-md px-4 sm:px-0">
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -84,7 +88,7 @@ function Contact() {
               required
             ></textarea>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

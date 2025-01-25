@@ -1,38 +1,46 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0">
-          <h2 className="text-xl font-bold">Contact Us</h2>
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 justify-between items-start">
+        <div className="text-center md:text-left">
+          <h2 className="text-xl font-bold mb-2">Contact Me</h2>
           <p>Email: contact@example.com</p>
           <p>Phone: +1 (123) 456-7890</p>
         </div>
-        <div className="mb-4 md:mb-0">
-          <h2 className="text-xl font-bold">Follow Us</h2>
-          <div className="flex space-x-4">
+        <div className="text-center">
+          <h2 className="text-xl font-bold mb-3">Follow Me On</h2>
+          <div className="flex justify-center space-x-4">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400"
             >
-              <i className="fab fa-facebook-f"></i>
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/_KrAkashdeep_"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400"
             >
-              <i className="fab fa-twitter"></i>
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kumar-akashdeep/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400"
             >
-              <i className="fab fa-linkedin-in"></i>
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
             <a
               href="https://instagram.com"
@@ -40,30 +48,30 @@ function Footer() {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-400"
             >
-              <i className="fab fa-instagram"></i>
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
           </div>
         </div>
-        <div>
-          <h2 className="text-xl font-bold">Quick Links</h2>
+        <div className="text-center md:text-right">
+          <h2 className="text-xl font-bold mb-2">Quick Links</h2>
           <ul className="list-none">
             <li>
-              <a href="/" className="text-white hover:text-gray-400">
+              <a href="#" className="text-white hover:text-gray-400">
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="text-white hover:text-gray-400">
+              <a href="#about" className="text-white hover:text-gray-400">
                 About
               </a>
             </li>
             <li>
-              <a href="/projects" className="text-white hover:text-gray-400">
+              <a href="#projects" className="text-white hover:text-gray-400">
                 Projects
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white hover:text-gray-400">
+              <a href="#contact" className="text-white hover:text-gray-400">
                 Contact
               </a>
             </li>
@@ -71,10 +79,7 @@ function Footer() {
         </div>
       </div>
       <div className="text-center mt-4">
-        <p>
-          &copy; {new Date().getFullYear()} Your Company Name. All rights
-          reserved.
-        </p>
+        <p>&copy; {new Date().getFullYear()} @ All rights reserved.</p>
       </div>
     </footer>
   );

@@ -6,96 +6,75 @@ function Contact() {
     email: "",
     message: "",
   });
-
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     setSubmitted(true);
   };
 
   return (
     <div
       id="contact"
-      className="container -mt-20 mx-auto px-4 flex flex-col items-center justify-center min-h-screen py-16"
+      className="container mx-auto px-4 flex flex-col items-center justify-center min-h-screen py-16"
     >
       <h1 className="text-2xl md:text-3xl font-bold mt-8 mb-8 text-center">
-        {`Let's Work Together`}
+        {` Let's Work Together`}
       </h1>
       {submitted ? (
         <div className="text-green-500 text-center max-w-md p-4 bg-green-50 rounded">
-          Thank you for your message! We will get back to you soon.
+          {` Thank you for your message! We'll respond shortly.`}
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="w-full max-w-md px-4 sm:px-0">
+        <form onSubmit={handleSubmit} className="w-full max-w-lg px-4 sm:px-0">
           <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="name"
-            >
+            <label className="block text-gray-700 text-sm font-bold mb-2">
               Name
             </label>
             <input
               type="text"
-              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
           <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="email"
-            >
+            <label className="block text-gray-700 text-sm font-bold mb-2">
               Email
             </label>
             <input
               type="email"
-              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
           <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="message"
-            >
+            <label className="block text-gray-700 text-sm font-bold mb-2">
               Message
             </label>
             <textarea
-              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              rows="5"
+              className="w-full p-2 border rounded h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             ></textarea>
           </div>
-          <div className="flex items-center justify-center">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Send Message
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors"
+          >
+            Send Message
+          </button>
         </form>
       )}
     </div>

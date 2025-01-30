@@ -21,7 +21,7 @@ const projects = [
     description:
       "A blog app allows users to create and share posts, interact through likes and comments. It serves as a platform for content creators and readers to connect and exchange ideas.",
     image: "../../blogify.png",
-    link: "https://github.com/KrAkashdeep/blog-app`",
+    link: "https://github.com/KrAkashdeep/blog-app",
   },
 ];
 

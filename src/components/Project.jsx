@@ -10,18 +10,18 @@ const projects = [
     link: "https://github.com/KrAkashdeep/Movie_Sentiment_Analysis",
   },
   {
-    title: "video call app",
-    description:
-      "A video call app facilitates seamless real-time communication, allowing users to interact via video, text chat, and shared screens.",
-    image: "../../video_call.png",
-    link: "https://github.com/KrAkashdeep/Video-Conferencing-Website",
-  },
-  {
     title: "Blog App",
     description:
       "A blog app allows users to create and share posts, interact through likes and comments. It serves as a platform for content creators and readers to connect and exchange ideas.",
     image: "../../blogify.png",
     link: "https://github.com/KrAkashdeep/blog-app",
+  },
+  {
+    title: "video call app",
+    description:
+      "A video call app facilitates seamless real-time communication, allowing users to interact via video, text chat, and shared screens.",
+    image: "../../video_call.png",
+    link: "https://github.com/KrAkashdeep/Video-Conferencing-Website",
   },
 ];
 
